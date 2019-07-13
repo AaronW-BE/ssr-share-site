@@ -1,6 +1,7 @@
 import React from 'react';
 import {info} from "../utils/utils";
 import ShareCard from "../components/shareCard";
+import '../style/index.css';
 
 class Index extends React.Component{
     constructor(props) {
@@ -9,6 +10,21 @@ class Index extends React.Component{
 
         this.state = {
             list: [
+                {
+                    img: 'https://img.ssyer.com/picture/new/zl/a6f98fa6ae4f89041ff5ba401303690d.png',
+                    date: new Date().toLocaleDateString(),
+                    author: '123'
+                },
+                {
+                    img: 'https://img.ssyer.com/picture/new/zl/a6f98fa6ae4f89041ff5ba401303690d.png',
+                    date: new Date().toLocaleDateString(),
+                    author: '123'
+                },
+                {
+                    img: 'https://img.ssyer.com/picture/new/zl/a6f98fa6ae4f89041ff5ba401303690d.png',
+                    date: new Date().toLocaleDateString(),
+                    author: '123'
+                },
                 {
                     img: 'https://img.ssyer.com/picture/new/zl/a6f98fa6ae4f89041ff5ba401303690d.png',
                     date: new Date().toLocaleDateString(),
@@ -31,13 +47,22 @@ class Index extends React.Component{
     render() {
         return (
             <div>
-                {
-                    this.state.list.map((item, idx) =>
-                        <ShareCard album={item.img} share_date={item.date} share_author={item.author}
-                            key={idx}
-                        />
-                    )
-                }
+                <div className='main-content'>
+                    <div className="card-wrap">
+                        {
+                            this.state.list.map((item, idx) =>
+                                <div className='card-item'>
+                                    <ShareCard album={item.img} share_date={item.date} share_author={item.author}
+                                               key={idx}
+                                    />
+                                </div>
+
+                            )
+                        }
+                    </div>
+
+                </div>
+
             </div>
         );
     }

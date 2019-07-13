@@ -13,13 +13,16 @@ export default class Header extends React.Component{
 
     render() {
         return (
-            <header className='header-wrap'>
-                <div className='brand-wrap'>
-                    <a href="/" className='logo-box'>
-                        <img src={this.logo_src} className='logo-img' alt=""/>
-                    </a>
-                    <span className='brand-text'>SSR Share</span>
+            <header className='header'>
+                <div className='header-wrap'>
+                    <div className='brand-wrap'>
+                        <a href="/" className='logo-box'>
+                            <img src={this.logo_src} className='logo-img' alt=""/>
+                        </a>
+                        <span className='brand-text'>SSR Share</span>
+                    </div>
                 </div>
+
             </header>
         );
     }
