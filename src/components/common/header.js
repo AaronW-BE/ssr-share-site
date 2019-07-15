@@ -1,7 +1,7 @@
 import React from 'react'
 
-import '../style/header/header.css';
-import {log} from "../utils/utils";
+import '../../style/header/header.css';
+import {log} from "../../utils/utils";
 
 export default class Header extends React.Component{
     constructor(props) {

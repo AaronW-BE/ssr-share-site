@@ -51,10 +51,8 @@ class Index extends React.Component{
                     <div className="card-wrap">
                         {
                             this.state.list.map((item, idx) =>
-                                <div className='card-item'>
-                                    <ShareCard album={item.img} share_date={item.date} share_author={item.author}
-                                               key={idx}
-                                    />
+                                <div className='card-item'  key={idx}>
+                                    <ShareCard album={item.img} share_date={item.date} share_author={item.author} />
                                 </div>
 
                             )
