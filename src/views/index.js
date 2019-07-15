@@ -2,6 +2,7 @@ import React from 'react';
 import {info} from "../utils/utils";
 import ShareCard from "../components/shareCard";
 import '../style/index.css';
+import {Icon} from 'antd'
 
 class Index extends React.Component{
     constructor(props) {
@@ -40,7 +41,8 @@ class Index extends React.Component{
                     date: new Date().toLocaleDateString(),
                     author: '123'
                 }
-            ]
+            ],
+            showLoadMore: false
         }
     }
 
@@ -59,10 +61,23 @@ class Index extends React.Component{
                         }
                     </div>
 
+                    {
+                        this.state.showLoadMore &&
+                        <div className='load-more-tips-wrap'>
+                            <Icon type="loading" />
+                            <span className='tips'>正在加载</span>
+                        </div>
+                    }
+
+
                 </div>
 
             </div>
         );
+    }
+
+    getNextPage() {
+
     }
 }
 

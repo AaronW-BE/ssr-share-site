@@ -25,3 +25,14 @@ code {
   margin-right: 10px;
   margin-top: 10px;
 }
+
+
+.load-more-tips-wrap {
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.load-more-tips-wrap .tips {
+  margin-left: 1rem;
+}
